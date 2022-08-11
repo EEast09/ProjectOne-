@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <h1>"Memory Match"</h1>
+    <div class="Rules">
+        <p>Player choose two cards at a time and tries to find two cards that are exactly the same.</p>
+        <p>If you find two cards that match then the cards will be removed from the board.</p>
+        <p>The game is over when all cards have been matched and removed from the board.</p>
+        <p>When you are ready press start</p>
+    <div class="game">
+        <div class="controls">
+            <button>Start</button>
+            <div class="stats">
+                <div class="moves">0 moves</div>
+                <div class="timer">time: 0 sec</div>
+            </div>
+            <button id= "resetButton">Reset</button>
+        </div>
+        <div class="board-container">
+            <div class="board" data-dimension="4"></div>
+            <div class="win">You won!</div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
