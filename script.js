@@ -1,3 +1,5 @@
+
+
 const selectors = {
     boardContainer: document.querySelector('.board-container'),
     board: document.querySelector('.board'),
@@ -51,7 +53,7 @@ const generateGame = () => {
     
 
 
-  const emojis = ['1.png','2.png','3.png','4.png','5.png','6.png','7.png','8.png']
+  const emojis = ['1.png','2.png','3.png','4.png','5.png','9.jpg','7.png','8.png']
    
     const picks = pickRandom(emojis, (dimensions * dimensions) / 2) 
     console.log("picks", picks);
@@ -64,7 +66,7 @@ const generateGame = () => {
                 `
                 <div class="card">
                     <div class="card-front"></div>
-                    <div class="card-back" style=backgroundImage: url('images/1.png'),font-size: 4px;">${item}</div>
+                    <div class="card-back" style='background-image: url("images/${item}");',font-size: 4px;">${item}</div>
                 </div>
             `).join('')}
        </div>
@@ -126,7 +128,10 @@ const flipCard = card => {
         if (flippedCards[0].innerText === flippedCards[1].innerText) {
             flippedCards[0].classList.add('matched')
             flippedCards[1].classList.add('matched')
-        whenMatched(flippedCards[0], flippedCards[1]);
+        
+        setTimeout(() => {
+            whenMatched(flippedCards[0], flippedCards[1]);
+        }, 1000)
         }
 
         setTimeout(() => {
@@ -142,7 +147,7 @@ if (!document.querySelectorAll('.card:not(.flipped)').length) {
         selectors.boardContainer.classList.add('flipped')
         selectors.win.innerHTML = `
             <span class="win-text">
-                ${name} won!<br />
+                Congrats! You won!<br />
                 with <span class="highlight">${state.totalFlips}</span> moves<br />
                 under <span class="highlight">${state.totalTime}</span> seconds
             </span>

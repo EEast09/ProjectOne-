@@ -94,11 +94,12 @@ button {
 }
 .card-back {
   transform: rotateY(180deg) rotateZ(50deg);
-  font-size: 14pt;
+  font-size: 1pt;
   user-select: none;
   text-align: center;
   line-height: 50px;
   background: #FDF8E6;
+  background-size: cover;
 }
 .card.flipped .card-front {
   transform: rotateY(180deg) rotateZ(50deg);
@@ -197,7 +198,15 @@ button{
   left: 10%;
   transform: translate(70%, 1100%);
 }
-
+.card-back {
+  transform: rotateY(180deg) rotateZ(50deg);
+  font-size: 1pt;
+  user-select: none;
+  text-align: center;
+  line-height: 50px;
+  background: #FDF8E6;
+  background-size: cover;
+}
   
   
 }
